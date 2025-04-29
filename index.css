@@ -61,7 +61,7 @@ h3{
     display:flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 30px
+    gap: 30px;
 }
 
 .experience-title{
@@ -70,4 +70,29 @@ h3{
 
 .experience-date{
 
+}
+
+.social-media-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.social-media-item{
+    
+}
+
+.social-media-head{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.social-tittle{
+    background-color: #fcfbf9;
+}
+
+.item-menu{
+    background-color: #f3f0f2;
 }
