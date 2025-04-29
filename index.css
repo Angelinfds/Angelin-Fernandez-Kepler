@@ -17,7 +17,7 @@ nav ul{
 
 h1{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: aqua;
+    color: #fcfcfc;
     font-size: 70px;
     text-align: center;
 }
@@ -43,4 +43,31 @@ h3{
     padding: 20px;
     background-color: rgb(75, 77, 77);
     text-align: center;  
+}
+
+.experience-container {
+}
+
+.experience-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-item{
+    background-color: #ffffff;
+}
+
+.experience-head{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px
+}
+
+.experience-title{
+
+}
+
+.experience-date{
+
 }
