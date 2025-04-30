@@ -61,7 +61,7 @@ h3{
     display:flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 30px
+    gap: 30px;
 }
 
 .experience-title{
@@ -95,6 +95,7 @@ h3{
 
 .item-menu{
     background-color: #f3f0f2;
+
     font-size: 2rem;
 }
 
@@ -129,4 +130,6 @@ h3{
     }
     
 }
+
+
 
