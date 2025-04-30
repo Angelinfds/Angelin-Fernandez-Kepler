@@ -49,8 +49,8 @@ h3{
 }
 
 .experience-list{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr
 }
 
 .experience-item{
@@ -112,6 +112,10 @@ h3{
     h1{
         font-size: 40px;
     }
+    .experience-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr
+    }
 }
 
 
@@ -128,8 +132,8 @@ h3{
     h1{
         font-size: 60px;
     }
-    
+    .experience-list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr)
+    }
 }
-
-
-
