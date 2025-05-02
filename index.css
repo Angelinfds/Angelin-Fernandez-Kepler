@@ -55,13 +55,18 @@ h3{
 
 .experience-item{
     background-color: #ffffff;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
 }
 
 .experience-head{
     display:flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 30px;
+    gap: 50px;
 }
 
 .experience-title{
@@ -97,6 +102,32 @@ h3{
     background-color: #f3f0f2;
 
     font-size: 2rem;
+}
+
+.skills ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skills ul li{
+    background-color: #ffffff;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.skills ul li:hover{
+    background-color: #785ce7;
+    cursor: pointer;
+}
+
+.name:hover{
+    background-color: #7052e7;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
 }
 
 /* Tablet */
