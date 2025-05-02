@@ -99,6 +99,22 @@ h3{
     font-size: 2rem;
 }
 
+.skills-container ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.skills-container ul li {
+    background-color: #ffffff;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
 /* Tablet */
 
 @media(min-width:550px) and (max-width: 919px){
