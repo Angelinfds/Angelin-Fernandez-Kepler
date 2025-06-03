@@ -192,6 +192,8 @@ fetch("https://api.github.com/users/Angelinfds/repos")
           // Añadir el elemento a la lista de proyectos
           projectList.appendChild(projectsli);
 
+          console.log(`Obteniendo Proyectos Github: ${repo.name}`);
+
         });
     })
     .catch((error) => console.error("Error fetching projects:", error));
