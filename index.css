@@ -403,6 +403,10 @@ img {
     text-align: center;
 }
 
+.cat-item h3 {
+    color: #020202;
+}
+
 .cat-item:hover {
     background-color: #785ce7;
     transform: scale(1.1);
