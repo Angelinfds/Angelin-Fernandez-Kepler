@@ -1,3 +1,7 @@
+
+
+
+
 const footer = document.createElement("footer");
 
 const body = document.querySelector("body");
@@ -113,12 +117,14 @@ async function mostrarGatos() {
     listaGatos.innerHTML = "";
 
     // Mostrar solo las primeras 5 razas para no sobrecargar la página
-    data.slice(0, 10).forEach((gato, index) => {
+    data.slice(0, 12).forEach((gato, index) => {
       console.log(`Procesando gato #${index + 1}:, gato.name`);
       
       // Crear un elemento de lista para cada gato
       const item = document.createElement("li");
-      
+      // Añadir una clase para estilos CSS
+      item.classList.add("cat-item");
+
       // Añadir información HTML SOLO con datos de texto (sin imágenes)
       item.innerHTML = `
         <h3>${gato.name || "Nombre no disponible"}</h3>
@@ -126,7 +132,7 @@ async function mostrarGatos() {
         <p><strong>Origen:</strong> ${gato.origin || "No disponible"}</p>
         <p><strong>Descripcion:</strong> ${gato.description || "No disponible"}</p>
         <p><strong>Esperanza de Vida:</strong> ${gato.life_span || "No disponible"}</p>
-      `;
+        `;
       
       // Añadir el elemento a la lista de gatos
       listaGatos.appendChild(item);
@@ -164,3 +170,28 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+const projectSection = document.getElementById("Projects-section");
+const projectList = projectSection.querySelector("ul");
+
+fetch("https://api.github.com/users/Angelinfds/repos")
+    .then((response) => response.json())
+    .then((data) => {
+        data.forEach((repo) => {     
+          // Crear un elemento de lista para cada proyecto 
+          const projectsli = document.createElement("li");
+          // Añadir una clase para estilos CSS
+          projectsli.classList.add("project-item");
+          // Añadir información HTML con datos del proyecto
+          projectsli.innerHTML = `
+            <h3>${repo.name || "Nombre no disponible"}</h3>
+            <p><strong>Descripción:</strong> ${repo.description || "No disponible"}</p>
+            <p><strong>Lenguaje:</strong> ${repo.language || "No disponible"}</p>
+            <p><strong>Fecha de creación:</strong> ${new Date(repo.created_at).toLocaleDateString() || "No disponible"}</p>
+            <a href="${repo.html_url}" target="_blank">Ver en GitHub</a>
+          `;
+          // Añadir el elemento a la lista de proyectos
+          projectList.appendChild(projectsli);
+
+        });
+    })
+    .catch((error) => console.error("Error fetching projects:", error));
